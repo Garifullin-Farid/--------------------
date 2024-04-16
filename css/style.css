@@ -1,4 +1,8 @@
 body {
+    overflow-x: hidden;
+}
+body {
+
     padding: 0;
     margin: 0;
     background-color: #fff;
@@ -13,14 +17,66 @@ h2 {
     margin: 20px 0;
 }
 
+.sidepanel {
+    height: 100vh;
+    width: 0; 
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    left: 0;
+    
+    background-color: #76A1A7; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+
+  .sidepanel a {
+    padding: 32px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidepanel a:hover {
+    color: black;
+  }
+  
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    top: 15px; left: 15px;
+    z-index: 99;
+    position: fixed;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #76A1A7;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+
 .fixed-container {
-    /* width: 1200px;
-    margin: 0 auto; */
+
     margin: 0 15%;
     padding: 100px 0;
     
 }
-
+p{
+    color: #000;
+}
 
 /*
     header
@@ -86,7 +142,7 @@ nav {
 .into-back{
     background: linear-gradient( #553be6 0%, #a87ffa 100%);
     position: fixed; top: 0; left: 0;
-    width: 100%; 
+    width: auto; 
     z-index: -1;
     height: 100%;
 }
@@ -99,7 +155,7 @@ nav {
     font-size: 36px;
 }
 
-.into h1, p {
+.into h1{
     color: #fff;
 }
 
@@ -110,31 +166,16 @@ nav {
     align-items: center;
 }
 
-
-.about-con p:first-child::before{
-    content: 'Ч';
-    position: absolute;
-    top: 10%;
-    left: -10%;
-    font-family: 'IBM Plex Serif', serif;
-    font-weight: 500;
-    opacity: 0.3;
-    color: #313030;
-    z-index: 1;
-    font-size: 20rem;
-}
 .about-con p:last-child{
     border-bottom: solid;
 }
 
 
 
-.about-sec p {
+.BigText_p {
     
     padding-bottom: 4rem;
     color: #000;
-    font-size: 1.7rem;
-    line-height: 3.9rem;
     display: inline-block;
     position: relative;
 }
@@ -150,13 +191,14 @@ nav {
     footer
 */
 footer {
-    padding: 100px 0;
+    padding: 10px 0;
     background-color: #000;
     position: relative;
     
 }
 
 .copyright {
+    color:#fff;
     text-align: center;
 }
 .sec2{
@@ -166,32 +208,13 @@ footer {
 .sec2 h2{
     margin-bottom: 60px;
 }
-.function-buttons{
-    display: flex;
-    flex-direction: row;
-}
-.function-buttons button{
-    min-height: 100px;
-    min-width: 200px;
-    appearance: none;
-    border: 0;
-    border-radius: 10px;
-    color: #fff;
-    padding: 8px 16px;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-}
+
 .hidden {
     display: none
   }
-.buttons{
-    
-    max-width: 50vh;
-    min-width: 50vh;
-}
+
 .sec2{
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -199,12 +222,195 @@ footer {
 .sec2 p{
     padding-bottom: 1rem;
     color: #000;
-    font-size: 1.1rem;
-    line-height: 1.9rem;
     display: inline-block;
     position: relative;
 }
 .target-con{
     margin-top: 10px;
     margin-left: 30px;
+}
+
+.test{
+    display: flex;
+    justify-content: center;
+}
+
+.quiz-frame
+{
+	border: 0;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	margin: 20px;
+}
+
+.estimation{
+    height: 100%;
+    
+}
+
+.buttons{
+    display: flex;
+}
+.div-but{
+    display: flex;
+    flex-direction: column
+}
+
+
+@media (min-width: 300px) {
+    .into h1 {
+        margin-top: 40px;
+    }
+    .fixed-container {
+        padding: 25px 0;
+    }    
+    .all-back{
+        top:72vh;
+    }
+    .into{
+        flex-direction: column;
+    }
+    .into img{
+        margin-top: 70px;
+        width: 412px;
+    }
+    [data-tooltip]::after{
+        width: 200px;
+    }
+    .sec2 p{
+        font-size: 13px;
+        line-height: 1.2rem;
+    }
+    .BigText_p{
+        font-size: 13px;
+        line-height: 2rem;    
+    }
+    .function-buttons button{
+        width: 150px;
+        height: 50px;
+        appearance: none;
+        border: 0;
+        border-radius: 10px;
+        color: #fff;
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .sec2{
+        height: 108vh;
+        display: flex;
+        
+        align-content: center;
+        justify-content: center;
+    }
+    .function-buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .quiz-frame{
+        height: 450px;
+    }
+   
+   
+}
+@media (min-width: 1250px) {
+    h2{
+        font-size: 35px;
+    }
+    .into h1 {
+        margin-top: 0px;
+    }
+    .fixed-container {
+        padding: 100px 0;
+    }    
+    .all-back{
+        top:100vh;
+    }
+    .into{
+        flex-direction: row;
+    }
+    .into img{
+        margin-top: 70px;
+        width: 412px;
+    }
+    .into img{
+        width: 1450px;
+    }
+    .sec2 p{
+        font-size: 1.1rem;
+        line-height: 1.9rem;
+    }
+    .BigText_p{
+        font-size: 1.7rem;
+        line-height: 3.9rem;
+    }
+    .about-con p:first-child::before{
+        content: 'Ч';
+        position: absolute;
+        top: 10%;
+        left: -10%;
+        font-family: 'IBM Plex Serif', serif;
+        font-weight: 500;
+        opacity: 0.3;
+        color: #313030;
+        font-size: 20rem;
+    }
+    [data-tooltip]::after{
+        width: 400px;
+    }
+    .function-buttons button{
+        width: 200px;
+        height: 100px;
+        appearance: none;
+        border: 0;
+        border-radius: 10px;
+        color: #fff;
+        padding: 8px 16px;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .function-buttons{
+        display: flex;
+        flex-direction: row;
+    }
+    .buttons{
+        max-width: 50vh;
+        min-width: 50vh;
+    }
+    .quiz-frame{
+        height: 80vh;
+    }
+    .dt{
+        color: #0e7dcb;;
+    }
+    [data-tooltip] {
+        position: relative; /* Относительное позиционирование */ 
+        
+       }
+       [data-tooltip]::after {
+        left: 0; top: 0; 
+        content: attr(data-tooltip); /* Выводим текст */
+        position: absolute; 
+        height: auto;
+        margin-top: 0;
+        margin-left: 0;
+        font-size: 1rem;
+        line-height: 1rem;
+        background: #3989c9; 
+        color: #fff;
+        padding: 0.1em; 
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+        pointer-events: none;
+        opacity: 0; 
+        transition: 1s;
+        z-index: 2;
+       } 
+       [data-tooltip]:hover::after {
+        opacity: 1; 
+        top: 2em;
+        left: 0;
+    }
 }
