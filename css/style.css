@@ -152,7 +152,7 @@ nav {
 
 .into h1 {
     width: 80%;
-    font-size: 36px;
+   
 }
 
 .into h1{
@@ -258,6 +258,7 @@ footer {
 
 @media (min-width: 300px) {
     .into h1 {
+        font-size: 27px;
         margin-top: 40px;
     }
     .fixed-container {
@@ -270,8 +271,8 @@ footer {
         flex-direction: column;
     }
     .into img{
-        margin-top: 70px;
-        width: 412px;
+        margin-top: 61px;
+        width: 296px;
     }
     [data-tooltip]::after{
         width: 200px;
@@ -297,7 +298,7 @@ footer {
         cursor: pointer;
     }
     .sec2{
-        height: 108vh;
+        height: 132vh;
         display: flex;
         
         align-content: center;
@@ -319,6 +320,7 @@ footer {
         font-size: 35px;
     }
     .into h1 {
+        font-size: 36px;
         margin-top: 0px;
     }
     .fixed-container {
