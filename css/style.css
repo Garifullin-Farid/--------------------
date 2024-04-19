@@ -34,7 +34,7 @@ h2 {
   .sidepanel a {
     padding: 32px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     display: block;
     transition: 0.3s;
@@ -254,9 +254,34 @@ footer {
     display: flex;
     flex-direction: column
 }
+.table {
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse; 
+}
+.table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.table td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}
 
 
 @media (min-width: 300px) {
+    .content {
+        flex-direction: column;
+    }
+    .imgtab{
+        width: 30vh;
+    }
+    .table th {
+        font-size: 10px;
+    }
     .into h1 {
         font-size: 27px;
         margin-top: 40px;
@@ -316,6 +341,19 @@ footer {
    
 }
 @media (min-width: 1250px) {
+    .table td {
+        padding-left: 35px;
+    }
+    .content {
+       
+        flex-direction: row;
+    }
+    .imgtab{
+        width: 70vh;
+    }
+    .table th {
+        font-size: 20px;
+    }
     h2{
         font-size: 35px;
     }
@@ -335,6 +373,9 @@ footer {
     .into img{
         margin-top: 70px;
         width: 412px;
+    }
+    .sec2{
+        height: 100vh;
     }
     .into img{
         width: 1450px;
